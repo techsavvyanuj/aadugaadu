@@ -87,8 +87,7 @@ export default function ProcessCards() {
         <div className="md:sticky md:top-0 md:h-screen flex items-center justify-center overflow-hidden py-16 md:py-0">
           <div
             className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6
-                        flex flex-col md:block gap-6 md:gap-0"
-            style={{ minHeight: '85vh' }}
+                        flex flex-col md:block gap-6 md:gap-0 md:min-h-[85vh]"
           >
             {/* ── LEFT CARD ── */}
             <div
@@ -102,7 +101,7 @@ export default function ProcessCards() {
                 perspectiveOrigin: '100% 50%',
               }}
             >
-              <div className="p-6 sm:p-8 md:p-10 lg:p-12 h-full flex flex-col" style={{ minHeight: '400px' }}>
+              <div className="p-6 sm:p-8 md:p-10 lg:p-12 h-full flex flex-col min-h-0 sm:min-h-[400px]">
                 <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[2.5rem] font-black text-white tracking-tight mb-6 sm:mb-8">
                   Collaboration Process
                 </h3>
@@ -116,7 +115,7 @@ export default function ProcessCards() {
             <div
               ref={centerRef}
               className="md:absolute md:inset-0 flex flex-col items-center justify-center
-                         pointer-events-none order-last md:order-none py-10 md:py-0"
+                         pointer-events-none order-last md:order-none py-6 md:py-0"
               style={{ zIndex: 0 }}
             >
               {/* Company logo (inverted to white) */}
@@ -131,14 +130,14 @@ export default function ProcessCards() {
                 />
               </div>
 
-              <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white text-center leading-[1.05] mb-8">
+              <h2 className="text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white text-center leading-[1.05] mb-4 sm:mb-8">
                 Trust the
                 <br />
                 process
               </h2>
 
               {/* vertical separator */}
-              <div className="w-px h-20 bg-white/20 mb-8" />
+              <div className="w-px h-10 sm:h-20 bg-white/20 mb-4 sm:mb-8" />
 
               {/* CTA */}
               <Link
@@ -173,7 +172,7 @@ export default function ProcessCards() {
                 perspectiveOrigin: '0% 50%',
               }}
             >
-              <div className="p-6 sm:p-8 md:p-10 lg:p-12 h-full flex flex-col" style={{ minHeight: '400px' }}>
+              <div className="p-6 sm:p-8 md:p-10 lg:p-12 h-full flex flex-col min-h-0 sm:min-h-[400px]">
                 <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[2.5rem] font-black text-white tracking-tight mb-6 sm:mb-8">
                   Software Production
                 </h3>

@@ -61,7 +61,7 @@ export default function ProjectsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-[#050505] pt-28 sm:pt-40 pb-16 sm:pb-28 px-4 sm:px-6 overflow-hidden">
+      <section className="relative bg-[#050505] pt-20 sm:pt-40 pb-10 sm:pb-28 px-4 sm:px-6 overflow-hidden">
         <div className="absolute top-20 left-1/3 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-violet-600/[0.03] rounded-full blur-[120px]" />
         <div className="max-w-[1400px] mx-auto relative z-10">
           <FadeIn>
@@ -81,7 +81,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="bg-[#050505] py-16 sm:py-28 px-4 sm:px-6 border-t border-white/[0.04]">
+      <section className="bg-[#050505] py-10 sm:py-28 px-4 sm:px-6 border-t border-white/[0.04]">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
             {projects.map((project, i) => (

@@ -294,7 +294,7 @@ export default function Craftsmanship() {
       <TechGridBg accent={activeProject.accent} activeIndex={activeIndex} />
 
       {/* Section header */}
-      <div className="relative z-10 max-w-[1100px] mx-auto px-4 sm:px-8 pt-16 sm:pt-28 pb-10 sm:pb-16">
+      <div className="relative z-10 max-w-[1100px] mx-auto px-4 sm:px-8 pt-10 sm:pt-28 pb-6 sm:pb-16">
         <FadeIn>
           <p className="text-violet-400 text-xs font-bold uppercase tracking-[0.25em] mb-4">
             What We Do
@@ -311,7 +311,7 @@ export default function Craftsmanship() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 max-w-[1100px] mx-auto px-4 sm:px-8 pb-16 sm:pb-28">
+      <div className="relative z-10 max-w-[1100px] mx-auto px-4 sm:px-8 pb-10 sm:pb-28">
         <div className="flex flex-col lg:flex-row gap-0 lg:gap-20">
           {/* Left — scrollable project list */}
           <div className="flex-1 lg:max-w-[50%]">
@@ -338,7 +338,7 @@ export default function Craftsmanship() {
                   </div>
 
                   <div
-                    className="relative py-6 sm:py-12 transition-all duration-500 cursor-pointer group"
+                    className="relative py-4 sm:py-12 transition-all duration-500 cursor-pointer group"
                     style={{
                       opacity: isActive ? 1 : isHovered ? 0.8 : 0.35,
                       transform: isActive ? 'translateX(8px)' : 'translateX(0px)',

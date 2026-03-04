@@ -38,7 +38,7 @@ export default function ScrollRevealText() {
       ref={sectionRef}
       className="relative bg-[#050505] py-0"
     >
-      <div className="sticky top-0 min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-10 lg:px-20">
+      <div className="sticky top-0 min-h-[60vh] sm:min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-10 lg:px-20">
         <p
           className="text-[clamp(1.1rem,3.2vw,3.2rem)] font-bold leading-[1.35] tracking-wide max-w-[1200px] text-center"
           style={{ wordSpacing: '0.06em' }}
@@ -66,7 +66,7 @@ export default function ScrollRevealText() {
       </div>
 
       {/* Extra scroll height so sticky has room to work */}
-      <div className="h-[80vh] sm:h-[150vh]" />
+      <div className="h-[50vh] sm:h-[150vh]" />
     </section>
   );
 }

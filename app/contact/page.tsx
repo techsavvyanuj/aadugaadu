@@ -17,7 +17,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-[#050505] pt-28 sm:pt-40 pb-16 sm:pb-28 px-4 sm:px-6 overflow-hidden">
+      <section className="relative bg-[#050505] pt-20 sm:pt-40 pb-10 sm:pb-28 px-4 sm:px-6 overflow-hidden">
         <div className="absolute top-20 right-1/4 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-violet-600/[0.03] rounded-full blur-[120px]" />
         <div className="max-w-[1400px] mx-auto relative z-10">
           <FadeIn>
@@ -37,7 +37,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-[#050505] py-16 sm:py-28 px-4 sm:px-6 border-t border-white/[0.04]">
+      <section className="bg-[#050505] py-10 sm:py-28 px-4 sm:px-6 border-t border-white/[0.04]">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-10 sm:gap-16">
           {/* Left - Info */}
           <FadeIn direction="left">

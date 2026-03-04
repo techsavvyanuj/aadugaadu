@@ -39,10 +39,10 @@ export default function Hero() {
       {/* Slight darkening overlay so text stays readable */}
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#050505]/60 via-transparent to-[#050505]/80 pointer-events-none" />
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 w-full pt-24 sm:pt-32 pb-0 pointer-events-none">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 w-full pt-20 sm:pt-32 pb-0 pointer-events-none">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left content */}
-          <div className="pointer-events-auto flex flex-col justify-center min-h-[50vh] lg:min-h-[70vh]">
+            <div className="pointer-events-auto flex flex-col justify-center min-h-[40vh] sm:min-h-[50vh] lg:min-h-[70vh]">
             <FadeIn delay={0.1}>
               <h1
                 className="font-black leading-[0.95] tracking-[0.04em] mb-6 sm:mb-10"
@@ -126,7 +126,7 @@ export default function Hero() {
 
         {/* Bottom tech strip */}
         <FadeIn delay={0.6}>
-          <div className="mt-10 sm:mt-20 pt-6 sm:pt-10 border-t border-white/[0.04]">
+          <div className="mt-6 sm:mt-20 pt-4 sm:pt-10 border-t border-white/[0.04]">
             <div className="flex items-center gap-4 sm:gap-8 overflow-hidden">
               <p className="text-zinc-600 text-xs sm:text-base font-semibold uppercase tracking-widest whitespace-nowrap shrink-0 hidden sm:block">Tech Stack</p>
               <div className="flex gap-6 sm:gap-10 animate-marquee-slow">

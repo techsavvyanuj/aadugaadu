@@ -39,7 +39,7 @@ const founders = [
     role: 'Co-Founder & CTO',
     bio: 'Tech architect leading engineering excellence across AI, full-stack, and mobile platforms. Turns complex problems into elegant solutions easily and precisely.',
     initials: 'NS',
-    image: '/images/nikhil-sahu.png',
+    image: '/images/nikhil-sahu.jpeg',
     imageScale: '1.0',
     imagePosition: '45% 30%',
     gradient: 'from-cyan-600 to-blue-600',
@@ -60,12 +60,12 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero — Split: Text left, Image right */}
-      <section className="relative bg-[#050505] min-h-screen flex items-center overflow-hidden">
+      <section className="relative bg-[#050505] min-h-0 sm:min-h-screen flex items-center overflow-hidden">
         {/* Background glow */}
         <div className="absolute top-0 left-1/3 w-[800px] h-[800px] bg-violet-600/[0.04] rounded-full blur-[150px]" />
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-fuchsia-600/[0.03] rounded-full blur-[120px]" />
 
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 w-full relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center py-24 sm:py-32 lg:py-0">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 w-full relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center pt-20 pb-12 sm:py-32 lg:py-0">
           {/* Left — Text */}
           <FadeIn direction="left">
             <div className="lg:pr-8">
@@ -145,8 +145,8 @@ export default function AboutPage() {
       </section>
 
       {/* Story */}
-      <section className="bg-[#050505] py-16 sm:py-28 px-4 sm:px-6 border-t border-white/[0.04]">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <section className="bg-[#050505] py-10 sm:py-28 px-4 sm:px-6 border-t border-white/[0.04]">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
           <FadeIn direction="left">
             <div>
               <span className="text-zinc-600 text-xs font-bold uppercase tracking-[0.2em]">Our Story</span>
@@ -198,10 +198,10 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="bg-[#050505] py-16 sm:py-28 px-4 sm:px-6 border-t border-white/[0.04]">
+      <section className="bg-[#050505] py-10 sm:py-28 px-4 sm:px-6 border-t border-white/[0.04]">
         <div className="max-w-[1400px] mx-auto">
           <FadeIn>
-            <div className="text-center mb-12 sm:mb-20">
+            <div className="text-center mb-10 sm:mb-20">
               <span className="text-zinc-600 text-xs font-bold uppercase tracking-[0.2em]">Journey</span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-3">Our Timeline</h2>
             </div>
@@ -224,10 +224,10 @@ export default function AboutPage() {
       </section>
 
       {/* Founder Team */}
-      <section className="bg-[#050505] py-16 sm:py-28 px-4 sm:px-6 border-t border-white/[0.04] overflow-hidden">
+      <section className="bg-[#050505] py-10 sm:py-28 px-4 sm:px-6 border-t border-white/[0.04] overflow-hidden">
         <div className="max-w-[1400px] mx-auto">
           <FadeIn>
-            <div className="text-center mb-12 sm:mb-20">
+            <div className="text-center mb-10 sm:mb-20">
               <span className="text-zinc-600 text-xs font-bold uppercase tracking-[0.2em]">Leadership</span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-3 mb-4">
                 Meet the <span className="text-gradient">Founders</span>
@@ -238,7 +238,7 @@ export default function AboutPage() {
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {founders.map((founder, i) => (
               <FadeIn key={founder.name} delay={i * 0.15}>
                 <ElectricBorder
@@ -254,14 +254,14 @@ export default function AboutPage() {
                     className="bg-[#0a0a0a] rounded-[20px] p-6 sm:p-8 h-full flex flex-col items-center text-center group cursor-pointer"
                   >
                     {/* Avatar */}
-                    <div className={`w-28 h-40 rounded-full bg-gradient-to-br ${founder.gradient} flex items-center justify-center mb-6 ring-4 ring-white/[0.05] group-hover:ring-white/[0.1] transition-all duration-500 group-hover:scale-110 overflow-hidden relative p-1`}>
+                    <div className={`w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br ${founder.gradient} flex items-center justify-center mb-6 ring-4 ring-white/[0.05] group-hover:ring-white/[0.1] transition-all duration-500 group-hover:scale-110 overflow-hidden relative p-1`}>
                       {founder.image ? (
                         <div className="w-full h-full rounded-full overflow-hidden bg-black/20">
                           <Image
                             src={founder.image}
                             alt={founder.name}
-                            width={96}
-                            height={96}
+                            width={128}
+                            height={128}
                             className="w-full h-full object-cover"
                             style={{ 
                               transform: `scale(${founder.imageScale || '1.15'})`,
@@ -303,10 +303,10 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-[#050505] py-16 sm:py-28 px-4 sm:px-6 border-t border-white/[0.04]">
+      <section className="bg-[#050505] py-10 sm:py-28 px-4 sm:px-6 border-t border-white/[0.04]">
         <div className="max-w-[1400px] mx-auto">
           <FadeIn>
-            <div className="text-center mb-10 sm:mb-16">
+            <div className="text-center mb-8 sm:mb-16">
               <span className="text-zinc-600 text-xs font-bold uppercase tracking-[0.2em]">Values</span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-3 mb-4">What Drives Us</h2>
               <p className="text-zinc-500 max-w-lg mx-auto">

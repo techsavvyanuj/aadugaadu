@@ -24,7 +24,7 @@ export default function CTASection() {
   return (
     <section className="bg-[#050505] border-t border-white/[0.03]">
       {/* Marquee strip — brighter + faster */}
-      <div className="overflow-hidden py-10">
+      <div className="overflow-hidden py-6 sm:py-10">
         <div className="flex" style={{ animation: 'marquee 18s linear infinite' }}>
           {[...Array(6)].map((_, i) => (
             <span
@@ -43,7 +43,7 @@ export default function CTASection() {
       </div>
 
       {/* CTA content */}
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-28">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-28">
         <FadeIn>
           <div className="text-center">
             {/* "The future awaits" — italic serif style like Lexogrine */}

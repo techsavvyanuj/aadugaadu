@@ -110,7 +110,7 @@ html {
     max-width: 100vw;
   }
 
-  /* Reduce heavy animations on mobile for performance */
+  /* Slightly faster marquee on mobile for better feel */
   .animate-marquee {
     animation-duration: 20s;
   }
@@ -118,12 +118,30 @@ html {
     animation-duration: 20s;
   }
   .animate-marquee-slow {
-    animation-duration: 30s;
+    animation-duration: 25s;
   }
 
   /* Fix Spline containers overflow */
   [class*="spline"] {
     max-width: 100%;
+  }
+
+  /* Reduce large section gaps on mobile */
+  section {
+    overflow-x: hidden;
+  }
+}
+
+/* Mobile animation enhancements — keep animations but optimise */
+@media (max-width: 768px) {
+  /* Smooth scroll-driven transforms on mobile */
+  .soft_animation_card {
+    transition: transform 0.3s ease-out;
+  }
+
+  /* Reduce heavy shadow/glow on mobile for perf */
+  .glow {
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.1);
   }
 }
 

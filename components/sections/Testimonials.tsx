@@ -91,8 +91,8 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="bg-[#050505] relative" style={{ minHeight: '100vh' }}>
-      <div className="max-w-[960px] mx-auto px-4 sm:px-8 py-16 sm:py-28 lg:py-36 flex flex-col justify-center" style={{ minHeight: '100vh' }}>
+    <section className="bg-[#050505] relative">
+      <div className="max-w-[960px] mx-auto px-4 sm:px-8 py-16 sm:py-28 lg:py-36 flex flex-col justify-center sm:min-h-screen">
         <FadeIn>
           {/* Rating bar */}
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-6 sm:mb-10">
