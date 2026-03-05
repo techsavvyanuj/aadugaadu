@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     "Aadugaadu is a software development company specializing in AI, Full Stack, Flutter, Android, and OTT platform development.",
   keywords: ["AI development", "Full Stack", "Flutter", "OTT Platform", "Android", "Software Company India"],
   authors: [{ name: "Aadugaadu" }],
+  icons: {
+    icon: "/images/favicon.png",
+    apple: "/images/favicon.png",
+  },
   openGraph: {
     title: "Aadugaadu — Engineering the Future of Digital Products",
     description: "We build intelligent, scalable digital products from idea to launch.",
