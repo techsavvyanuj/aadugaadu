@@ -1,13 +1,17 @@
 import Hero from '@/components/sections/Hero';
-import ScrollRevealText from '@/components/sections/ScrollRevealText';
-import LogoMarquee from '@/components/sections/LogoMarquee';
-import Testimonials from '@/components/sections/Testimonials';
-import TechExpertise from '@/components/sections/TechExpertise';
-import ProcessCards from '@/components/sections/ProcessCards';
-import UnveilingText from '@/components/sections/UnveilingText';
-import Craftsmanship from '@/components/sections/Craftsmanship';
-import StatsMarquee from '@/components/sections/StatsMarquee';
-import CTASection from '@/components/sections/CTASection';
+import dynamic from 'next/dynamic';
+
+// Lazy load below-fold sections — only Hero loads eagerly for fast first paint
+const ScrollRevealText = dynamic(() => import('@/components/sections/ScrollRevealText'));
+const LogoMarquee = dynamic(() => import('@/components/sections/LogoMarquee'));
+const TechExpertise = dynamic(() => import('@/components/sections/TechExpertise'));
+const ProcessCards = dynamic(() => import('@/components/sections/ProcessCards'));
+const UnveilingText = dynamic(() => import('@/components/sections/UnveilingText'));
+const Craftsmanship = dynamic(() => import('@/components/sections/Craftsmanship'));
+const StatsMarquee = dynamic(() => import('@/components/sections/StatsMarquee'));
+const Testimonials = dynamic(() => import('@/components/sections/Testimonials'));
+const CTASection = dynamic(() => import('@/components/sections/CTASection'));
+
 export default function Home() {
   return (
     <>

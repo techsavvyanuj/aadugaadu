@@ -42,6 +42,7 @@ const ElectricBorder = ({
   const animationRef = useRef<number>(0);
   const timeRef = useRef(0);
   const lastFrameTimeRef = useRef(0);
+  const isVisibleRef = useRef(false);
 
   const random = useCallback((x: number) => {
     return (Math.sin(x * 12.9898) * 43758.5453) % 1;
@@ -162,12 +163,14 @@ const ElectricBorder = ({
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const octaves = 10;
+    const octaves = 6;
     const lacunarity = 1.6;
     const gain = 0.7;
     const amplitude = chaos;
     const frequency = 10;
     const baseFlatness = 0;
+    const frameInterval = 1000 / 30; // Throttle to 30fps
+    let lastDrawTime = 0;
     const displacement = 35;
     const borderOffset = 30;
 
@@ -190,6 +193,20 @@ const ElectricBorder = ({
 
     const drawElectricBorder = (currentTime: number) => {
       if (!canvas || !ctx) return;
+
+      // Skip rendering when not visible
+      if (!isVisibleRef.current) {
+        animationRef.current = requestAnimationFrame(drawElectricBorder);
+        return;
+      }
+
+      // Throttle to 30fps
+      const elapsed = currentTime - lastDrawTime;
+      if (elapsed < frameInterval) {
+        animationRef.current = requestAnimationFrame(drawElectricBorder);
+        return;
+      }
+      lastDrawTime = currentTime;
 
       const deltaTime = (currentTime - lastFrameTimeRef.current) / 1000;
       timeRef.current += deltaTime * speed;
@@ -269,6 +286,13 @@ const ElectricBorder = ({
     });
     resizeObserver.observe(container);
 
+    // Only animate when visible
+    const observer = new IntersectionObserver(
+      ([entry]) => { isVisibleRef.current = entry.isIntersecting; },
+      { threshold: 0 }
+    );
+    observer.observe(container);
+
     animationRef.current = requestAnimationFrame(drawElectricBorder);
 
     return () => {
@@ -276,6 +300,7 @@ const ElectricBorder = ({
         cancelAnimationFrame(animationRef.current);
       }
       resizeObserver.disconnect();
+      observer.disconnect();
     };
   }, [color, speed, chaos, borderRadius, octavedNoise, getRoundedRectPoint]);
 
