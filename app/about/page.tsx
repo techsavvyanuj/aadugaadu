@@ -31,7 +31,7 @@ const founders = [
     initials: 'AM',
     image: '/images/anuj-mishra.png',
     imageScale: '1.15',
-    imagePosition: '45% 35%',
+    imagePosition: '45% 30%',
     gradient: 'from-violet-600 to-fuchsia-600',
   },
   {
@@ -41,7 +41,7 @@ const founders = [
     initials: 'NS',
     image: '/images/nikhil-sahu.jpeg',
     imageScale: '1.0',
-    imagePosition: '45% 30%',
+    imagePosition: '45% 20%',
     gradient: 'from-cyan-600 to-blue-600',
   },
   {
@@ -51,7 +51,7 @@ const founders = [
     initials: 'SH',
     image: '/images/harendra-singh.jpg',
     imageScale: '1.0',
-    imagePosition: '33% 50%',
+    imagePosition: '33% 40%',
     gradient: 'from-amber-600 to-orange-600',
   },
 ];
@@ -254,14 +254,14 @@ export default function AboutPage() {
                     className="bg-[#0a0a0a] rounded-[20px] p-6 sm:p-8 h-full flex flex-col items-center text-center group cursor-pointer"
                   >
                     {/* Avatar */}
-                    <div className={`w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br ${founder.gradient} flex items-center justify-center mb-6 ring-4 ring-white/[0.05] group-hover:ring-white/[0.1] transition-all duration-500 group-hover:scale-110 overflow-hidden relative p-1`}>
+                    <div className={`w-40 h-30 sm:w-35 sm:h-50 rounded-full bg-gradient-to-br ${founder.gradient} flex items-center justify-center mb-6 ring-4 ring-white/[0.05] group-hover:ring-white/[0.1] transition-all duration-500 group-hover:scale-110 overflow-hidden relative p-1.5`}>
                       {founder.image ? (
                         <div className="w-full h-full rounded-full overflow-hidden bg-black/20">
                           <Image
                             src={founder.image}
                             alt={founder.name}
-                            width={128}
-                            height={128}
+                            width={192}
+                            height={192}
                             className="w-full h-full object-cover"
                             style={{ 
                               transform: `scale(${founder.imageScale || '1.15'})`,
