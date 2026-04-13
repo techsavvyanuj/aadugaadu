@@ -62,7 +62,7 @@ const teamMembers = [
     role: 'Tech Team',
     bio: 'Dedicated developer contributing to building robust, scalable applications across the tech stack.',
     initials: 'SA',
-    image: '/images/team/saniya-ahmed.jpg',
+    image: '/images/team/saniya-ahmed.jpeg',
     gradient: 'from-pink-600 to-rose-600',
     borderColor: '#e11d48',
   },
@@ -71,7 +71,7 @@ const teamMembers = [
     role: 'Social Media & Leads',
     bio: 'Drives brand visibility and generates high-quality leads through strategic social media campaigns.',
     initials: 'AS',
-    image: '/images/team/anushka-sonkar.jpg',
+    image: '/images/team/anushka-sonkar.jpeg',
     gradient: 'from-emerald-600 to-teal-600',
     borderColor: '#0d9488',
   },
@@ -80,14 +80,14 @@ const teamMembers = [
     role: 'Content Creator',
     bio: 'Crafts compelling narratives and engaging content that connects brands with their audience.',
     initials: 'AN',
-    image: '/images/team/aishwarya-nayak.jpg',
+    image: '',
     gradient: 'from-sky-600 to-indigo-600',
     borderColor: '#4f46e5',
   },
   {
     name: 'Hiring Soon',
     role: 'UI/UX Designer',
-    bio: 'We\'re looking for a creative designer to craft beautiful, intuitive user experiences.',
+    bio: 'We\'re looking for a creative designer to craft beautiful designs with good and intuitive user experiences.',
     initials: '?',
     image: '',
     gradient: 'from-zinc-700 to-zinc-800',
@@ -97,7 +97,7 @@ const teamMembers = [
   {
     name: 'Hiring Soon',
     role: 'Data Analyst',
-    bio: 'We\'re searching for a data-driven mind to turn insights into impactful decisions.',
+    bio: 'We\'re searching for a data-driven mind and to turn insights into impactful decisions.',
     initials: '?',
     image: '',
     gradient: 'from-zinc-700 to-zinc-800',
@@ -313,7 +313,7 @@ export default function AboutPage() {
                             width={192}
                             height={192}
                             className="w-full h-full object-cover"
-                            style={{ 
+                            style={{
                               transform: `scale(${founder.imageScale || '1.15'})`,
                               objectPosition: founder.imagePosition || '50% 35%'
                             }}
