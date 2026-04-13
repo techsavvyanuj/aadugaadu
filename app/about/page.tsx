@@ -39,7 +39,7 @@ const founders = [
     role: 'Co-Founder & CTO',
     bio: 'Tech architect leading engineering excellence across AI, full-stack, and mobile platforms. Turns complex problems into elegant solutions easily and precisely.',
     initials: 'NS',
-    image: '/images/nikhil-sahu.jpeg',
+    image: '/images/nikhil-sahus.jpeg',
     imageScale: '1.0',
     imagePosition: '45% 20%',
     gradient: 'from-cyan-600 to-blue-600',
