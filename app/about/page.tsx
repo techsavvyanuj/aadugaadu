@@ -56,6 +56,56 @@ const founders = [
   },
 ];
 
+const teamMembers = [
+  {
+    name: 'Saniya Ahmed',
+    role: 'Tech Team',
+    bio: 'Dedicated developer contributing to building robust, scalable applications across the tech stack.',
+    initials: 'SA',
+    image: '/images/team/saniya-ahmed.jpg',
+    gradient: 'from-pink-600 to-rose-600',
+    borderColor: '#e11d48',
+  },
+  {
+    name: 'Anushka Sonkar',
+    role: 'Social Media & Leads',
+    bio: 'Drives brand visibility and generates high-quality leads through strategic social media campaigns.',
+    initials: 'AS',
+    image: '/images/team/anushka-sonkar.jpg',
+    gradient: 'from-emerald-600 to-teal-600',
+    borderColor: '#0d9488',
+  },
+  {
+    name: 'Aishwarya Nayak',
+    role: 'Content Creator',
+    bio: 'Crafts compelling narratives and engaging content that connects brands with their audience.',
+    initials: 'AN',
+    image: '/images/team/aishwarya-nayak.jpg',
+    gradient: 'from-sky-600 to-indigo-600',
+    borderColor: '#4f46e5',
+  },
+  {
+    name: 'Hiring Soon',
+    role: 'UI/UX Designer',
+    bio: 'We\'re looking for a creative designer to craft beautiful, intuitive user experiences.',
+    initials: '?',
+    image: '',
+    gradient: 'from-zinc-700 to-zinc-800',
+    borderColor: '#52525b',
+    isHiring: true,
+  },
+  {
+    name: 'Hiring Soon',
+    role: 'Data Analyst',
+    bio: 'We\'re searching for a data-driven mind to turn insights into impactful decisions.',
+    initials: '?',
+    image: '',
+    gradient: 'from-zinc-700 to-zinc-800',
+    borderColor: '#52525b',
+    isHiring: true,
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -294,6 +344,92 @@ export default function AboutPage() {
                         </motion.a>
                       ))}
                     </div>
+                  </motion.div>
+                </ElectricBorder>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team */}
+      <section className="bg-[#050505] py-10 sm:py-28 px-4 sm:px-6 border-t border-white/[0.04] overflow-hidden">
+        <div className="max-w-[1400px] mx-auto">
+          <FadeIn>
+            <div className="text-center mb-10 sm:mb-20">
+              <span className="text-zinc-600 text-xs font-bold uppercase tracking-[0.2em]">The People</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-3 mb-4">
+                Our <span className="text-gradient">Team</span>
+              </h2>
+              <p className="text-zinc-500 max-w-lg mx-auto">
+                The talented individuals who bring our vision to life every single day.
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 max-w-6xl mx-auto">
+            {teamMembers.map((member, i) => (
+              <FadeIn key={`${member.name}-${member.role}`} delay={i * 0.1}>
+                <ElectricBorder
+                  color={member.borderColor}
+                  speed={0.8}
+                  chaos={0.08}
+                  borderRadius={16}
+                  className="h-full"
+                >
+                  <motion.div
+                    whileHover={{ y: -4 }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                    className="bg-[#0a0a0a] rounded-[16px] p-4 sm:p-5 h-full flex flex-col items-center text-center group cursor-pointer"
+                  >
+                    {/* Avatar */}
+                    {'isHiring' in member && member.isHiring ? (
+                      /* Skeleton loading avatar for hiring cards */
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-zinc-800/60 border-2 border-dashed border-zinc-600 flex items-center justify-center mb-4 relative overflow-hidden">
+                        {/* Shimmer sweep */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zinc-700/30 to-transparent animate-[shimmer_2s_infinite]" style={{ animation: 'shimmer 2s infinite' }} />
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-zinc-500">
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                          <circle cx="10" cy="7" r="4" />
+                          <line x1="20" y1="8" x2="20" y2="14" />
+                          <line x1="17" y1="11" x2="23" y2="11" />
+                        </svg>
+                      </div>
+                    ) : (
+                      <div className={`w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br ${member.gradient} flex items-center justify-center mb-4 ring-2 ring-white/[0.05] group-hover:ring-white/[0.1] transition-all duration-500 group-hover:scale-110 overflow-hidden relative p-1`}>
+                        {member.image ? (
+                          <div className="w-full h-full rounded-full overflow-hidden bg-black/20">
+                            <Image
+                              src={member.image}
+                              alt={member.name}
+                              width={128}
+                              height={128}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        ) : (
+                          <span className="text-white text-lg font-black tracking-wider">{member.initials}</span>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Name & Role */}
+                    {'isHiring' in member && member.isHiring ? (
+                      <>
+                        <h3 className="text-zinc-400 font-bold text-sm sm:text-base mb-0.5 tracking-tight flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                          {member.name}
+                        </h3>
+                        <p className="text-zinc-500 text-[10px] font-bold uppercase tracking-[0.12em] mb-3">{member.role}</p>
+                        <p className="text-zinc-600 text-xs leading-relaxed flex-1 italic">{member.bio}</p>
+                      </>
+                    ) : (
+                      <>
+                        <h3 className="text-white font-bold text-sm sm:text-base mb-0.5 tracking-tight">{member.name}</h3>
+                        <p className="text-violet-400 text-[10px] font-bold uppercase tracking-[0.12em] mb-3">{member.role}</p>
+                        <p className="text-zinc-500 text-xs leading-relaxed flex-1">{member.bio}</p>
+                      </>
+                    )}
                   </motion.div>
                 </ElectricBorder>
               </FadeIn>
