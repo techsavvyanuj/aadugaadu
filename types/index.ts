@@ -8,7 +8,10 @@ export interface Project {
   technologies: string[];
   image?: string;
   imageUrl?: string;
+  thumbnail?: string;        // local thumbnail path (optional, can add later)
   link?: string;
+  playStoreUrl?: string;     // Google Play Store link
+  websiteUrl?: string;       // Live website link
   clientName?: string;
   results?: string;
   featured: boolean;
